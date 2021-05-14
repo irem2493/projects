@@ -14,6 +14,7 @@ include ("connect_db.php");
 include ("lib/function.php");
 ?>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 <div id="hd">
 <div id="hd_wrapper">
 	<div class="hd_sch_wr">
@@ -57,7 +58,7 @@ include ("lib/function.php");
 		</div>
 	<ul class="hd_login">        
 				<?php if ($is_member) {  ?>
-				<li><<a href=""><?= $member_id ?>´Ô</a></li>
+				<li><a href=""><?= $member_id ?>´Ô</a></li>
 				<li><a href="/php/logout.php">·Î±×¾Æ¿ô</a></li>
 				<?php if ($is_admin) {  ?>
 				<li class="tnb_admin"><a href="/admin/home.php">°ü¸®ÀÚ</a></li>
