@@ -87,6 +87,10 @@ function check_delete(){
 	});
 }
 
-
+function goSearch(){
+	var sfl = document.getElementById("sfl");
+	var select_val = sfl.options[sel.selectedIndex].value;
+	document.getElementById('select_val').value = select_val;
+}
 </script>
 

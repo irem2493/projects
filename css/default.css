@@ -415,3 +415,87 @@ box-shadow:0 2px 5px rgba(0,0,0,0.2)}
 #gnb_all .gnb_al_li li a {color:#555}
 #gnb_all_bg {display:none;background:rgba(0,0,0,0.1);width:100%;height:100%;position:fixed;left:0;top:0;z-index:999}
 
+.bo_sch_wrap {display:none;width:100%;height:100%;position:fixed;top:0;left:0;z-index:999}
+.bo_sch {position:absolute;top:50%;left:50%;background:#fff;text-align:left;width:330px;max-height:300px;margin-left:-125px;margin-top:-180px;overflow-y:auto;border-radius:5px;-webkit-box-shadow:1px 1px 18px rgba(0,0,0,0.2);-moz-box-shadow:1px 1px 18px rgba(0,0,0,0.2);box-shadow:1px 1px 18px rgba(0,0,0,0.2);border:1px solid #dde7e9;background:#fff;border-radius:3px}
+.bo_sch:after {display:block;visibility:hidden;clear:both;content:""}
+.bo_sch h3 {padding:15px;border-bottom:1px solid #e8e8e8}
+.bo_sch legend {background:red}
+.bo_sch form {padding:15px;display:block}
+.bo_sch select {border:0;width:100%;height:40px;border:1px solid #d0d3db;border-radius:2px;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);
+-moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);
+box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075)}
+.bo_sch .sch_bar {display:inline-block;width:100%;clear:both;margin-top:15px;border:1px solid #d0d3db;border-radius:2px;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);
+-moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);
+box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075)}
+.bo_sch .sch_input {width:250px;height:38px;border:0;padding:0;background-color:transparent;float:left}
+.bo_sch .sch_btn {height:38px;float:right;color:#656565;background:none;border:0;width:40px;font-size:15px}
+.bo_sch .bo_sch_cls {position:absolute;right:0;top:0;color:#b5b8bb;border:0;padding:12px 15px;font-size:16px;background:#fff}
+.bo_sch_bg {background:#000;background:rgba(0,0,0,0.1);width:100%;height:100%}
+
+#page_num {text-align:center;}
+#page_num ul{list-style:none; margin:0; padding:0;}
+#page_num ul > li{ margin: 0; padding: 5; border : 0; display: inline;}
+
+/* 하단 레이아웃 */
+#ft {background:tomato;margin:0 auto;text-align:center}
+#ft h1 {position:absolute;font-size:0;line-height:0;overflow:hidden}
+#ft_wr {max-width:1240px;margin:0;padding:40px 0;position:relative;display:inline-block;text-align:left}
+#ft_wr:after {display:block;visibility:hidden;clear:both;content:""}
+#ft_wr .ft_cnt {width:25%;float:left;padding:0 20px}
+
+#ft_link {text-align:left}
+#ft_link a {display:block;color:#fff;line-height:2em;font-weight:bold}
+#ft_company h2 {font-size:1.2em;margin-bottom:20px}
+#ft_company {font-weight:normal;color:#e3e3e3;line-height:2em}
+#ft_catch {margin:20px 0 10px}
+#ft_copy {text-align:center;width:1200px;margin:0 auto;padding:20px 0;color:#ffff;font-size:0.92em; border-top:1px solid #E14325}
+#top_btn {position:fixed;bottom:20px;right:20px;width:50px;height:50px;line-height:46px;border:2px solid #333;color:#333;text-align:center;font-size:15px;z-index:90;background:rgba(255,255,255,0.5)}
+#top_btn:hover {border-color:#3059c7;background:#3059c7;color:#fff}
+
+/* 중간 레이아웃 */
+#wrapper {}
+#container_wr:after {display:block;visibility:hidden;clear:both;content:""}
+#container_wr {margin:0 auto;height:100%;zoom:1}
+#aside {float:right;width:235px;padding:0;height:100%;margin:20px 0 20px 20px}
+
+#container {position:relative;float:left;min-height:500px;height:auto !important;margin:20px 0;height:500px;font-size:1em;width:930px;zoom:1}
+#container:after {display:block;visibility:hidden;clear:both;content:""}
+#container_title {font-size:1.333em;margin:0 auto;font-weight:bold}
+#container_title span {margin:0 auto 10px;display:block;line-height:30px}
+
+.lt_wr {width:32%}
+.lt_wr:nth-child(3n+1) {clear:both}
+.latest_wr {margin-bottom:20px}
+.latest_wr:after {display:block;visibility:hidden;clear:both;content:""}
+.latest_top_wr {margin:0 -10px 20px}
+.latest_top_wr:after {display:block;visibility:hidden;clear:both;content:""}
+
+/* 새글 스킨 (latest) */
+.lat {position:relative;margin-bottom:20px;background:#fff}
+.lat .lat_title {display:block;line-height:45px;font-size:1.2em;color:#253dbe}
+.lat .lat_title a {position:relative;color:#000;display:inline-block}
+
+.lat ul {padding:10px 0}
+.lat li {position:relative;line-height:18px;border-bottom:1px solid #e5ecee;margin-bottom:10px}
+.lat li a {line-height:24px;font-weight:bold;font-size:1.2em;line-height:20px;vertical-align:middle}
+.lat li a:hover {color:#3a8afd}
+.lat li .fa-heart {color:#ff0000}
+.lat li .fa-lock {display:inline-block;line-height:14px;width:16px;font-size:0.833em;color:#4f818c;background:#cbe3e8;text-align:center;border-radius:2px;font-size:12px;border:1px solid #cbe3e8;vertical-align:middle}
+.lat li .new_icon {display:inline-block;width:16px;line-height:16px;font-size:0.833em;color:#23db79;background:#b9ffda;text-align:center;border-radius:2px;margin-left:2px;font-weight:bold;vertical-align:middle}
+.lat li .hot_icon {display:inline-block;width:16px;line-height:16px;font-size:0.833em;color:#ff0000;background:#ffb9b9;text-align:center;border-radius:2px;vertical-align:middle}
+.lat li .fa-caret-right {color:#bbb}
+.lat li .fa-download {display:inline-block;width:16px;line-height:16px;font-size:0.833em;color:#daae37;background:#ffefb9;text-align:center;border-radius:2px;vertical-align:middle}
+.lat li .fa-link {display:inline-block;width:16px;line-height:16px;font-size:0.833em;color:#b451fd;background:#edd3fd;text-align:center;border-radius:2px;vertical-align:middle}
+
+.lat .profile_img img{border-radius:50%}
+
+.lt_info {padding:10px 0}
+.lt_info .lt_nick {}
+.lt_info .lt_date {color:#888}
+
+.lat .empty_li {line-height:145px;color:#666;text-align:center;padding:0}
+.lat .empty_li:before {background:none;padding:0}
+
+.lat .lt_cmt {background:#e9eff5;color:#3a8afd;font-size:11px;height:16px;line-height:16px;padding:0 5px;border-radius:3px;vertical-align:middle}
+.lat .lt_more {position:absolute;top:11px;right:0;display:block;width:40px;line-height:25px;color:#3a8afd;border-radius:3px;text-align:center}
+.lat .lt_more:hover {color:#777}
