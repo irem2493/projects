@@ -62,7 +62,10 @@
 		<section id="bo_v_atc">
 			<h2 id="bo_v_atc_title">º»¹®</h2>
 			<div id="bo_v_con">
-				<?= $row['content'] ?>
+				<? 
+					$content = nl2br($row['content']); 
+					echo $content;
+				?>
 			</div>
 		</section>
 		<ul class="bo_v_nb">
@@ -95,8 +98,7 @@
 		</div>
 	</div>
 </div>
-</body>
-</html>
+<? include $_SERVER['DOCUMENT_ROOT']."/tail.php"; ?>
 
 <script>
 		jQuery(function($){

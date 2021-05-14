@@ -46,8 +46,8 @@
 		</div>
 	</div>
 </div>
-</body>
-</html>
+
+<? include $_SERVER['DOCUMENT_ROOT']."/tail.php"; ?>
 
 <script>
 function fwrite_submit(f){
