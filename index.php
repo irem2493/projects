@@ -6,6 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/default.css">
+<link rel="stylesheet" href="<?$_SERVER['DOCUMENT_ROOT']?>/simpleBanner/simpleBanner.css">
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="<?$_SERVER['DOCUMENT_ROOT']?>/simpleBanner/simpleBanner.js"></script>
 <title>jeyeon_lib</title>
 </head>
 <body>
@@ -13,10 +16,16 @@
     <div id="container_wr">
    
     <div id="container">
+		<div class="simple_banner_wrap" data-type="hslide" data-interval="3000">
+			<ul>
+				<li><img src ="/img/hanrabong.jpg" width="100%" height="95%"></li>
+				<li><img src ="/img/orig.jpg" width="100%" height="95%"></li>
+			</ul>
+		</div>
 		<div class="latest_wr">
 			<div style="float:left;" class="lt_wr">
 				<div class="lat">
-			<h2 class="lat_title"><a href="/php/board/board_list.php">자유게시판</a></h2>
+			<h2 class="lat_title"><a href="/php/board/board_list.php">공지사항</a></h2>
 			<ul>
 					
 					<?
@@ -43,7 +52,7 @@
 					</div>
 				<? } } ?>
 					</ul>
-			<a href="/php/board/board_list.php" class="lt_more"><span class="sound_only">자유게시판</span>더보기</a>
+			<a href="/php/board/board_list.php" class="lt_more"><span class="sound_only">공지사항</span>더보기</a>
 
 		</div>
 			</div>

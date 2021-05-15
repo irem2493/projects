@@ -1,12 +1,12 @@
 <style>
 .body_background{
-	background-image: url('/img/book.jpg'); 
+	background-image: url('/img/orange.jpg'); 
 	height: 100vh;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	overflow: scroll;
-	background: url("/img/book.jpg") no-repeat center/cover;
+	background: url("/img/orange.jpg") no-repeat center/cover;
 }
 
 

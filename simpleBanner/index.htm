@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="euc-kr" />
+<meta name="author" content="Hangun's World" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+ 
+<title>Simple Banner Demo</title>
+
+<link rel="stylesheet" href="simpleBanner.css">
+
+<style type="text/css">
+/* demo layout */
+h3{ font-size:14px; border:1px solid #CCC; background-color:#EEE; margin:0; padding:10px; text-align:center; }
+h4{ font-size:14px; font-weight:normal; border:1px solid #CCC; background-color:#EEE; margin:0; padding:10px; text-align:center; }
+h4 a{ text-decoration:none; color:#69F; font-weight:bold; }
+pre{ display:block; margin:20px 0 0; padding:0; color:#333; font-size:12px; }
+pre .property{ color:#39F; font-weight:bold; }
+pre .value{ color:#F90; font-weight:bold; }
+
+/* override styles */
+.banner01, .banner02, .banner03{ width:300px; height:200px; margin:10px; }
+.banner01 ul li a, .banner02 ul li a, .banner03 ul li a{
+	display:block; width:300px; height:200px; text-shadow:0 0 2px #666;
+	text-decoration:none; color:#FFF; font-size:24px; font-weight:bold; letter-spacing:-1px; text-align:center; line-height:200px;
+}
+.banner01, .banner01 ul li a{ width:400px; }
+.banner03, .banner03 ul li a{ width:200px; }
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="simpleBanner.js"></script>
+</head>
+
+<body>
+<h3>Simple Banner Demo</h3>
+
+<pre>&lt;div <span class="property">class</span>="<span class="value">simple_banner_wrap</span>"&gt;...&lt;div&gt;</pre>
+<div class="simple_banner_wrap banner01">
+	<ul>
+		<li style="background-color:#9f6;"><a href="#">banner 1</a></li>
+		<li style="background-color:#69f;"><a href="#">banner 2</a></li>
+		<li style="background-color:#9f6;"><a href="#">banner 3</a></li>
+		<li style="background-color:#f69;"><a href="#">banner 4</a></li>
+		<li style="background-color:#f96;"><a href="#">banner 5</a></li>
+	</ul>
+</div>
+
+<pre>&lt;div <span class="property">class</span>="<span class="value">simple_banner_wrap</span>" <span class="property">data-type</span>="<span class="value">hslide</span>" <span class="property">data-nav-type</span>="<span class="value">numeral</span>"&gt;...&lt;div&gt;</pre>
+<div class="simple_banner_wrap banner01" data-type="hslide" data-nav-type="numeral">
+	<ul>
+		<li style="background-color:#f96;"><a href="#">banner 1</a></li>
+		<li style="background-color:#f69;"><a href="#">banner 2</a></li>
+		<li style="background-color:#9f6;"><a href="#">banner 3</a></li>
+		<li style="background-color:#69f;"><a href="#">banner 4</a></li>
+		<li style="background-color:#9f6;"><a href="#">banner 5</a></li>
+	</ul>
+</div>
+
+<pre>&lt;div <span class="property">class</span>="<span class="value">simple_banner_wrap</span>" <span class="property">data-type</span>="<span class="value">vslide</span>" <span class="property">data-interval</span>="<span class="value">3000</span>"&gt;...&lt;div&gt;</pre>
+<div class="simple_banner_wrap banner02" data-type="vslide" data-interval="3000">
+	<ul>
+		<li style="background-color:#69f;"><a href="#">banner 1</a></li>
+		<li style="background-color:#9f6;"><a href="#">banner 2</a></li>
+		<li style="background-color:#f69;"><a href="#">banner 3</a></li>
+		<li style="background-color:#f96;"><a href="#">banner 4</a></li>
+		<li style="background-color:#9f6;"><a href="#">banner 5</a></li>
+		<li style="background-color:#f69;"><a href="#">banner 6</a></li>
+	</ul>
+</div>
+
+<pre>&lt;div <span class="property">class</span>="<span class="value">simple_banner_wrap</span>" <span class="property">data-nav-type</span>="<span class="value">prev_next</span>"&gt;...&lt;div&gt;</pre>
+<div class="simple_banner_wrap banner03" data-nav-type="prev_next">
+	<ul>
+		<li style="background-color:#f69;"><a href="#">banner 1</a></li>
+		<li style="background-color:#f96;"><a href="#">banner 2</a></li>
+		<li style="background-color:#9f6;"><a href="#">banner 3</a></li>
+		<li style="background-color:#f69;"><a href="#">banner 4</a></li>
+	</ul>
+</div>
+
+
+<h4>go to <a href="http://hangunsworld.com/blog/1630/">Hangun's World Blog</a></h4>
+
+</body>
+
+</html>

@@ -67,7 +67,7 @@
 			 <div class="forgot_pw">
                 <a href="login.php">Go login</a>
 				|
-				 <a href="login.php">Go Home</a>
+				 <a href="../index.php">Go Home</a>
 			</div>
         </div>
     </div>

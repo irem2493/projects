@@ -62,7 +62,10 @@
 		<section id="bo_v_atc">
 			<h2 id="bo_v_atc_title">본문</h2>
 			<div id="bo_v_con">
-				<?= $row['content'] ?>
+				<? 
+					$content = nl2br($row['content']); 
+					echo $content;
+				?>
 			</div>
 		</section>
 		<ul class="bo_v_nb">
@@ -95,8 +98,7 @@
 		</div>
 	</div>
 </div>
-</body>
-</html>
+<? include $_SERVER['DOCUMENT_ROOT']."/tail.php"; ?>
 
 <script>
 		jQuery(function($){
@@ -119,7 +121,7 @@ function is_update(){
 	var now_user = "<?= $_SESSION[ 'userId' ]?>";
 	
 	
-	if(now_user == writer || <?= $is_admin ?>){
+	if(now_user == writer || "<?= $is_admin ?>"){
 		location.href = "write.php?idx=<?= $idx ?>&mode=edit";
 	}
 	else{
@@ -134,7 +136,7 @@ function is_delete(){
 	var now_user = "<?= $_SESSION[ 'userId' ]?>";
 	
 	
-	if(now_user == writer ||  <?= $is_admin ?>){
+	if(now_user == writer ||  "<?= $is_admin ?>"){
 		if(confirm("선택한 자료를 정말 삭제하시겠습니까?")) {
 			location.href = "write_update.php?idx=<?= $idx ?>&mode=delete";
 		}

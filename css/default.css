@@ -450,7 +450,7 @@ box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075)}
 #ft_catch {margin:20px 0 10px}
 #ft_copy {text-align:center;width:1200px;margin:0 auto;padding:20px 0;color:#ffff;font-size:0.92em; border-top:1px solid #E14325}
 #top_btn {position:fixed;bottom:20px;right:20px;width:50px;height:50px;line-height:46px;border:2px solid #333;color:#333;text-align:center;font-size:15px;z-index:90;background:rgba(255,255,255,0.5)}
-#top_btn:hover {border-color:#3059c7;background:#3059c7;color:#fff}
+#top_btn:hover {border-color:#E14325;background:#E14325;color:#fff}
 
 /* 중간 레이아웃 */
 #wrapper {}
@@ -463,7 +463,7 @@ box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075)}
 #container_title {font-size:1.333em;margin:0 auto;font-weight:bold}
 #container_title span {margin:0 auto 10px;display:block;line-height:30px}
 
-.lt_wr {width:32%}
+.lt_wr {width:50%}
 .lt_wr:nth-child(3n+1) {clear:both}
 .latest_wr {margin-bottom:20px}
 .latest_wr:after {display:block;visibility:hidden;clear:both;content:""}
@@ -499,3 +499,16 @@ box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075)}
 .lat .lt_cmt {background:#e9eff5;color:#3a8afd;font-size:11px;height:16px;line-height:16px;padding:0 5px;border-radius:3px;vertical-align:middle}
 .lat .lt_more {position:absolute;top:11px;right:0;display:block;width:40px;line-height:25px;color:#3a8afd;border-radius:3px;text-align:center}
 .lat .lt_more:hover {color:#777}
+
+/* 사이트 로고 */
+.wsite-logo {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#wsite-title {
+    color: tomato !important;
+    letter-spacing: -1px !important;
+	font-size: 30px;
+	font-weight:20px;
+}

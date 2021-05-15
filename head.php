@@ -17,7 +17,15 @@ include ("lib/function.php");
 <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 <div id="hd">
 <div id="hd_wrapper">
+	<div id="logo">
+            <span class="wsite-logo">
+					<a href="/">
+					<span id="wsite-title">제주샛별한라봉농장</span>
+					</a>
+			</span>
+        </div>
 	<div class="hd_sch_wr">
+				
 				<fieldset id="hd_sch">
 					<legend>사이트 내 전체검색</legend>
 					<form name="fsearchbox" method="get" action="search.php" onsubmit="return fsearchbox_submit(this);">
@@ -58,7 +66,7 @@ include ("lib/function.php");
 		</div>
 	<ul class="hd_login">        
 				<?php if ($is_member) {  ?>
-				<li><a href=""><?= $member_id ?>님</a></li>
+				<li><a href="/php/md_info.php"><?= $member_id ?>님</a></li>
 				<li><a href="/php/logout.php">로그아웃</a></li>
 				<?php if ($is_admin) {  ?>
 				<li class="tnb_admin"><a href="/admin/home.php">관리자</a></li>
