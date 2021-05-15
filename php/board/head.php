@@ -14,6 +14,6 @@
     <div id="container_wr">
    
     <div id="container">
-      <h2 id="container_title"><span title="공지사항">공지사항</span></h2>
+      
 
 	  

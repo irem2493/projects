@@ -13,8 +13,20 @@ include ("connect_db.php");
 	  }
 include ("lib/function.php");
 ?>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/default.css">
+<link rel="stylesheet" href="<?$_SERVER['DOCUMENT_ROOT']?>/simpleBanner/simpleBanner.css">
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="<?$_SERVER['DOCUMENT_ROOT']?>/simpleBanner/simpleBanner.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<title>jeyeon_lib</title>
+</head>
+<body>
+
 <div id="hd">
 <div id="hd_wrapper">
 	<div id="logo">
@@ -86,9 +98,19 @@ include ("lib/function.php");
         <h2>메인메뉴</h2>
         <div class="gnb_wrap">
             <ul id="gnb_1dul">
-                <li class="gnb_1dli gnb_mnal"><button type="button" class="gnb_menu_btn" title="전체메뉴"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button></li>
-                                    <li class="gnb_empty">메뉴 준비 중입니다.</li>
-                            </ul>
+				<li class="gnb_1dli" style="z-index:999">
+                    <a href="/php/company_info.php" target="_self" class="gnb_1da">회사소개</a>
+                 </li>
+                <li class="gnb_1dli" style="z-index:999">
+                    <a href="" target="_self" class="gnb_1da">상품소개</a>
+                 </li>
+				 <li class="gnb_1dli" style="z-index:999">
+                    <a href="" target="_self" class="gnb_1da">주문현황</a>
+                 </li>
+				  <li class="gnb_1dli" style="z-index:999">
+                    <a href="/php/board/board_list.php" target="_self" class="gnb_1da">공지사항</a>
+                 </li>
+             </ul>
             <div id="gnb_all">
                 <h2>전체메뉴</h2>
                 <ul class="gnb_al_ul">

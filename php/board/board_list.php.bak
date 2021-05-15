@@ -147,13 +147,13 @@
 				echo "<li><a href='?page=$pre'><img src='../../img/btn_prev.gif'></a></li>";
 			}
 			for($i=$block_start; $i<=$block_end; $i++){ 
-				//if($page > 1){
+				if($page > 1){
 					if( $page == $i){ 
 					  echo "<li style='font-weight:bold'> $i </li>"; 
 					}else{
 					  echo "<li><a href='?page=$i'>  $i </a></li>"; 
 					}
-				//}
+				}
 			 }
 
 			  if($block_num < $total_block){

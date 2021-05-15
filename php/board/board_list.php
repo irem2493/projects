@@ -36,6 +36,7 @@
 	$result= mysqli_query($conn,$sql);
 
 ?>
+<h2 id="container_title"><span title="공지사항">공지사항</span></h2>
 <form name="fboardlist" id="fboardlist" action="check_delete.php" onsubmit="return fboardlist_submit(this);" method="post">
 	<div id="bo_btn_top">
 		<div id="bo_list_total">
