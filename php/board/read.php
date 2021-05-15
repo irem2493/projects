@@ -77,7 +77,6 @@
 				$befor_result = mysqli_query($conn,$befor_sql);
 				$befor_row = mysqli_fetch_assoc($befor_result);
 				
-				echo $befor_sql; exit;
 
 				$after_sql = "select * from board where idx = '$after'";
 				$after_result = mysqli_query($conn,$after_sql);
