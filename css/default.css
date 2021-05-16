@@ -461,7 +461,7 @@ box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075)}
 #container_wr {margin:0 auto;height:100%;zoom:1}
 #aside {float:right;width:235px;padding:0;height:100%;margin:20px 0 20px 20px}
 
-#container {position:relative;float:left;min-height:500px;height:auto !important;margin:20px 0;height:500px;font-size:1em;width:930px;zoom:1}
+#container {position:relative;float:left;min-height:500px;height:auto !important;margin:20px 0;height:500px;font-size:1em;width:1200px;zoom:1}
 #container:after {display:block;visibility:hidden;clear:both;content:""}
 #container_title {font-size:1.333em;margin:0 auto;font-weight:bold}
 #container_title span {margin:0 auto 10px;display:block;line-height:30px}
@@ -531,7 +531,7 @@ box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075)}
 
 /* 상품 소개 */
 .prodListWrap {
-    width: 959px;
+    width: 100%;
     margin-bottom: 20px;
 }
 .prodListWrap ul li {

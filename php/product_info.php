@@ -7,7 +7,13 @@
 			<h2 id="container_title"><span title="상품소개">상품소개</span></h2>
 			<div class="prodListWrap">
 				<ul>
-					
+					<li>
+						<div class="photo">
+							<img src="../img/orig2.jpg" width = "280px"; height = "200px;" >
+						</div>
+						<p class="prodName"><del>상품명) 3K(6~8과) </del></p>
+						<p class="prodPrice"><span>품절</p>
+					</li>
 					<li>
 						<div class="photo">
 							<img src="../img/orig2.jpg" width = "280px"; height = "200px;" >
