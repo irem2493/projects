@@ -56,6 +56,8 @@ border:1px solid #558ab7 !important;
 #container_wr,
 #ft_wr {width:1200px}
 
+
+
 /* 팝업레이어 */
 #hd_pop {z-index:1000;position:relative;margin:0 auto;height:0}
 #hd_pop h2 {position:absolute;font-size:0;line-height:0;overflow:hidden}
@@ -442,6 +444,7 @@ box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075)}
 #ft_wr {max-width:1240px;margin:0;padding:40px 0;position:relative;display:inline-block;text-align:left}
 #ft_wr:after {display:block;visibility:hidden;clear:both;content:""}
 #ft_wr .ft_cnt {width:25%;float:left;padding:0 20px}
+#ft_wr .ft_cnt2 {width:50%;float:left;padding:0 20px}
 
 #ft_link {text-align:left}
 #ft_link a {display:block;color:#fff;line-height:2em;font-weight:bold}
@@ -463,7 +466,7 @@ box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075)}
 #container_title {font-size:1.333em;margin:0 auto;font-weight:bold}
 #container_title span {margin:0 auto 10px;display:block;line-height:30px}
 
-.lt_wr {width:50%}
+.lt_wr {width:35%}
 .lt_wr:nth-child(3n+1) {clear:both}
 .latest_wr {margin-bottom:20px}
 .latest_wr:after {display:block;visibility:hidden;clear:both;content:""}
@@ -511,4 +514,52 @@ box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075)}
     letter-spacing: -1px !important;
 	font-size: 30px;
 	font-weight:20px;
+}
+
+
+.links {width: 30%; height: 290px; margin-top:30px; margin-left:20px;}
+.links a {
+	display:block;width:90%;padding: 8px;text-align:center;height:35px;
+  border: 0;
+  outline: none;
+  border-radius: 40px;
+  background: linear-gradient(to left, rgb(255, 77, 46), rgb(255, 155, 47));
+  color: white;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+/* 상품 소개 */
+.prodListWrap {
+    width: 959px;
+    margin-bottom: 20px;
+}
+.prodListWrap ul li {
+    position: relative;
+    float: left;
+    width: 237px;
+    height: 287px;
+    border: 1px solid #fff;
+    margin-left: 10px;
+    padding-top: 20px;
+	margin-right:50px;
+}
+.prodListWrap ul li .photo {
+    width: 280px;
+    margin: 0 auto 10px;
+}
+.prodListWrap ul li .prodName {
+    width: 180px;
+    margin: 0 auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.prodListWrap ul li .prodPrice {
+    width: 180px;
+    margin: 0 auto 10px;
+}
+.prodListWrap ul li .prodPrice span {
+    font-weight: bold;
+    font-size: 1.385em;
 }
