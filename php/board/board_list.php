@@ -8,7 +8,7 @@
 	else if($sfl == 'content') $Search_sql = "and content like '%".$stx."%' ";
 	else if($sfl == 'id') $Search_sql = "and id like '%".$stx."%' ";
 
-	$show_count = 1;
+	$show_count = 15;
 	$sql= "select count(*) as cnt  from board where 1 {$Search_sql}";
 	$result_cnt = mysqli_query($conn,$sql);
 	$board_cnt = mysqli_fetch_array($result_cnt);

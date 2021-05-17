@@ -19,6 +19,7 @@
 	}
 	
 ?>
+	<h2 id="container_title"><span title="공지사항">공지사항</span></h2>
 	<article id="bo_v" style="width:100%">
 		<header>
 			<h2 id="bo_v_title">
@@ -77,19 +78,19 @@
 				$befor_result = mysqli_query($conn,$befor_sql);
 				$befor_row = mysqli_fetch_assoc($befor_result);
 				
-
+				
 				$after_sql = "select * from board where idx = '$after'";
 				$after_result = mysqli_query($conn,$after_sql);
 				$after_row = mysqli_fetch_assoc($after_result);
 				
 				
-			if($befor_row['title'] != '' && $befor_row['date'] != ''){ ?>
+			if($befor_row['title'] != '' && $befor_row['create_date'] != ''){ ?>
 				<li class="btn_prv"><span class="nb_tit"><i class="fa fa-chevron-up" aria-hidden="true"></i> 이전글</span>
-					<a href="read.php?idx=<?= $befor ?>"><?= $befor_row['title']?></a> <span class="nb_date"><?= $befor_row['date'] ?></span>
+					<a href="read.php?idx=<?= $befor ?>"><?= $befor_row['title']?></a> <span class="nb_date"><?= $befor_row['create_date'] ?></span>
 				</li>       
-		<? } if($after_row['title'] != '' && $after_row['date'] != ''){ ?>
+		<? } if($after_row['title'] != '' && $after_row['create_date'] != ''){ ?>
 				<li class="btn_next"><span class="nb_tit"><i class="fa fa-chevron-down" aria-hidden="true"></i> 다음글</span>
-					<a href="read.php?idx=<?= $after ?>"><?= $after_row['title']?></a>  <span class="nb_date"><?= $after_row['date'] ?></span>
+					<a href="read.php?idx=<?= $after ?>"><?= $after_row['title']?></a>  <span class="nb_date"><?= $after_row['create_date'] ?></span>
 				</li>    
 			<? } ?>
 		</ul>

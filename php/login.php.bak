@@ -1,12 +1,12 @@
 <style>
 .body_background{
-	background-image: url('/img/book.jpg'); 
+	background-image: url('/img/orange.jpg'); 
 	height: 100vh;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	overflow: scroll;
-	background: url("/img/book.jpg") no-repeat center/cover;
+	background: url("/img/orange.jpg") no-repeat center/cover;
 }
 
 </style>
@@ -40,11 +40,11 @@
                 </div>
 				<div style="padding:5px; " ></div>
                 <div class="forgot_pw" style = "text-align: center">
-					<a href="">아이디 찾기</a>
+					<!--<a href="">아이디 찾기</a>
 					|
 					 <a href="">비밀번호 찾기</a>
 					 |
-					<a href="sign_up.php">회원가입</a>
+					--><a href="sign_up.php">회원가입</a>
 					</div>
 				
             </div>

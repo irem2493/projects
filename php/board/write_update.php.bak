@@ -4,7 +4,7 @@
 	($_GET["mode"] == "") ? $mode = $_POST["mode"] : $mode = $_GET["mode"];
 	($_GET["idx"] == "") ? $idx	= $_POST["idx"] : $idx =  $_GET["idx"];
 	$id		= $_POST["id"];
-	($_POST["password"] == "") $pw = '' : $pw = md5($_POST["password"]);
+	($_POST["password"] != "") ? $pw = md5($_POST["password"]) : $pw = '';
 	$title	= $_POST["title"];
 	$content= $_POST["content"];
 	$create_date	= date("Y-m-d H:i:s");
@@ -17,6 +17,8 @@
 	
 
 	if ( $mode == "" ){
+		$sql2 = "alter table board AUTO_INCREMENT =50";
+		mysqli_query($conn,$sql2);
 		$SetSql	.= "				create_date				= '$create_date'";
 		$Sql	 = "	INSERT INTO	board SET ";
 		$Sql	.= $SetSql;

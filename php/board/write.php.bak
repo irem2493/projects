@@ -8,8 +8,9 @@
 	$row = mysqli_fetch_assoc($result);
 
 ?>
+	<h2 id="container_title"><span title="공지사항">공지사항<?=($mode=="") ? "글쓰기" : "수정"; ?></span></h2>
 	<section id="bo_w">
-		<h2 class = "sound_only">게시판 이름 글쓰기</h2>
+		<h2 class = "sound_only">공지사항 </h2>
 		 <form name="fwrite" id="fwrite" action="write_update.php" onsubmit="return fwrite_submit(this);" method="post"  autocomplete="off" style="width:100%">
 		 	 <input type="hidden" name="mode" value="<?php echo $mode ?>">
 			 <input type="hidden" name="idx" value="<?php echo $idx ?>">
@@ -46,8 +47,8 @@
 		</div>
 	</div>
 </div>
-</body>
-</html>
+
+<? include $_SERVER['DOCUMENT_ROOT']."/tail.php"; ?>
 
 <script>
 function fwrite_submit(f){

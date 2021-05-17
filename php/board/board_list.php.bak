@@ -15,7 +15,7 @@
 	$total_count= $board_cnt['cnt'];
 
 	if(isset($_GET['page'])) $page = $_GET['page'];
-	 else $page = 1;
+	 else $page = 15;
 
 	 $list = $show_count; 
 	 $block_ct = $show_count; 
@@ -36,6 +36,7 @@
 	$result= mysqli_query($conn,$sql);
 
 ?>
+<h2 id="container_title"><span title="공지사항">공지사항</span></h2>
 <form name="fboardlist" id="fboardlist" action="check_delete.php" onsubmit="return fboardlist_submit(this);" method="post">
 	<div id="bo_btn_top">
 		<div id="bo_list_total">
