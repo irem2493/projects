@@ -1,7 +1,9 @@
 <div id="ft">
 	<div id="ft_wr">
 		<div id="ft_link" class="ft_cnt">
-            <a href="">회사소개</a>
+            <a href="/php/company_info.php">회사소개</a>
+			<a href="/php/product_info.php">상품소개</a>
+			<a href="/php/board/board_list.php">공지사항</a>
         </div>
 		<div id="ft_company" class="ft_cnt2">
         	<h2>사이트 정보</h2>
