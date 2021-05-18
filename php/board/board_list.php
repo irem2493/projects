@@ -8,7 +8,7 @@
 	else if($sfl == 'content') $Search_sql = "and content like '%".$stx."%' ";
 	else if($sfl == 'id') $Search_sql = "and id like '%".$stx."%' ";
 
-	$show_count = 15;
+	$show_count = 5;
 	$sql= "select count(*) as cnt  from board where 1 {$Search_sql}";
 	$result_cnt = mysqli_query($conn,$sql);
 	$board_cnt = mysqli_fetch_array($result_cnt);
@@ -28,6 +28,7 @@
 	 if($block_end > $total_page) $block_end = $total_page;
 	$total_block = ceil($total_page/$block_ct);
 	$start_num = ($page-1) * $list;
+	$cou = $total_count-($page-1)*$list;
 
 	$sql	= "select * from board where 1 {$Search_sql}";
 	$sql .= "order by idx desc";
@@ -52,7 +53,7 @@
             	<button type="button" class="btn_bo_sch btn_b01 btn" title="게시판 검색"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">게시판 검색</span></button>
             </li>
 			<li> 
-				<a href= 'javascript:void(0);' onclick="is_member()"  class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a>
+				<a href= 'javascript:void(0);' onclick="is_admin()"  class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a>
 			</li>
 			<? if($is_admin){ ?>
 			<li> 
@@ -76,12 +77,15 @@
 			</thead>
 			<tbody>
 				<?
-					$line_num = $total_count+1;  $i=0;
+					//번호 메기기 루틴 
+					
+					//$line_num = $total_count+1;  
+					$i=0;
 
 					if($total_count > 0){
 						
 						while($row=mysqli_fetch_array($result)){
-							$line_num --;
+							
 
 							$title = $row['title'];
 							if(strlen($title)>30) {
@@ -111,7 +115,7 @@
 								<input type="checkbox" name="chk[]" value="<?php echo $i ?>" id="chk_<?php echo $i ?>">
 							</td> 
 						<? } ?>
-						<td><? echo $line_num ?></td>
+						<td><? echo $cou ?></td>
 						<? if($is_lock){ ?>
 							<td onclick="location.href='ck_read.php?idx=<?= $row['idx'] ?>' ">
 								<?= $title,  $lock_img, $img;?>
@@ -125,15 +129,17 @@
 						<td><?= $row['hit']?></td>
 						<td><?= $board_date ?></td>
 					</tr>
-						<?$i++;?>
-					<? } ?>
-				<?} else { ?> <td colspan="5" >등록된 게시물이 없습니다.</td> <? } ?>
+						<?
+							$cou --; 
+							$i++;
+						} 
+					} else { ?> <td colspan="5" >등록된 게시물이 없습니다.</td> <? } ?>
 			</tbody>
 		</table>
 	</div>
 	<div class="bo_fx">
 		<ul class="btn_bo_user">
-			 <li><a href='javascript:void(0);' onclick="is_member()" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li>       
+			 <li><a href='javascript:void(0);' onclick="is_admin()" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li>       
 		</ul>	
     </div>
 	</form>
@@ -148,13 +154,13 @@
 				echo "<li><a href='?page=$pre'><img src='../../img/btn_prev.gif'></a></li>";
 			}
 			for($i=$block_start; $i<=$block_end; $i++){ 
-				if($page > 1){
+				
 					if( $page == $i){ 
 					  echo "<li style='font-weight:bold'> $i </li>"; 
 					}else{
 					  echo "<li><a href='?page=$i'>  $i </a></li>"; 
 					}
-				}
+				
 			 }
 
 			  if($block_num < $total_block){

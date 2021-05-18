@@ -18,7 +18,7 @@
 				</div>
 			</div>
 			<h2 id="container_title"><span title="찾아오는 길">찾아오는 길</span></h2>
-			<div id="map" style="width:90%;height:25%; text-align:center">
+			<div id="map" style="width:90%;height:25%; text-align:center; margin-left:50px" >
 				<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	357853be80c2505076315b08259507aa"></script>
 				<script type="text/javascript">
 					var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
@@ -47,7 +47,7 @@
 				marker.setMap(map);
 				</script>
 			</div>
-			<div style = "padding:15px; text-align:left" >
+			<div style = "padding:15px; text-align:left; margin-left:50px" >
 			<font size="3"><p style="line-height: 2.2;">
 			제주국제공항 버스편<br>
 			1. 181번, 622번 환승<br>

@@ -17,7 +17,7 @@
 			  <div class="bo_w_info write_div">
 			  
 			  	<label for="wr_id" class="sound_only">ID<strong>필수</strong></label>
-				<input type="text" name="id" value="<?php if ($mode == ""){if($is_member){ echo $member_id;}  else if($is_admin){ echo $admin_id ;}} else{ echo  $row['id']; }?>" id="id" required class="frm_input half_input required" placeholder="ID" readonly> 
+				<input type="text" name="id" value="<?php if ($mode == ""){echo $admin_id ;} else{ echo  $row['id']; }?>" id="id" required class="frm_input half_input required" placeholder="ID" > 
 			
 				
 				<label for="wr_password" class="sound_only">비밀번호<strong>필수</strong></label>

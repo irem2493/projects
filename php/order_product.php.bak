@@ -5,6 +5,11 @@
     <div id="container_wr">
 		<div id="container">
 			<h2 id="container_title"><span title="惑前林巩">惑前林巩</span></h2>
+			<section id="bo_w">
+				<h2 class = "sound_only">惑前林巩 </h2>
+				 <form name="forder" id="forder" action="order_update.php" onsubmit="return forder_submit(this);" method="post"  autocomplete="off" style="width:100%">
+				 </form>
+			</section>
 		</div>
 	</div>
 </div>
