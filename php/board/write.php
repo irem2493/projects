@@ -20,7 +20,7 @@
 				<input type="text" name="id" value="<?php if ($mode == ""){echo $admin_id ;} else{ echo  $row['id']; }?>" id="id" required class="frm_input half_input required" placeholder="ID" > 
 			
 				
-				<label for="wr_password" class="sound_only">비밀번호<strong>필수</strong></label>
+				<label for="wr_password" class="sound_only">비밀번호</label>
 				<input type="password" name="password" id="wr_password"  class="frm_input half_input " placeholder="비밀번호">
 			  </div>
 

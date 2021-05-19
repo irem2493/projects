@@ -4,8 +4,7 @@
 	$stx		= $_POST['stx'];
 	$sfl		= $_POST['sfl'];
 
-	if($sfl == 'title') $Search_sql = "and title like '%".$stx."%' ";
-	else if($sfl == 'content') $Search_sql = "and content like '%".$stx."%' ";
+	if($sfl == 'product_name') $Search_sql = "and product_name like '%".$stx."%' ";
 	else if($sfl == 'id') $Search_sql = "and id like '%".$stx."%' ";
 
 	$show_count = 5;
@@ -30,15 +29,15 @@
 	$start_num = ($page-1) * $list;
 	$cou = $total_count-($page-1)*$list;
 
-	$sql	= "select * from board where 1 {$Search_sql}";
+	$sql	= "select * from product where 1 {$Search_sql}";
 	$sql .= "order by idx desc";
 	$sql .= " limit $start_num, $list";
 
 	$result= mysqli_query($conn,$sql);
 
 ?>
-<h2 id="container_title"><span title="공지사항">공지사항</span></h2>
-<form name="fboardlist" id="fboardlist" action="check_delete.php" onsubmit="return fboardlist_submit(this);" method="post">
+<h2 id="container_title"><span title="주문현황">주문현황</span></h2>
+<form name="forderlist" id="forderlist" action="check_order_delete.php" onsubmit="return fboardlist_submit(this);" method="post">
 	<div id="bo_btn_top">
 		<div id="bo_list_total">
 			<span>Total <? echo $total_count?> 건</span>
@@ -47,13 +46,13 @@
 
 		<ul class="btn_bo_user">
 			
-            	<li><a href="board_list.php" class="btn_b01 btn" title="목록"><i class="fa fa-list" aria-hidden="true"></i><span class="sound_only">목록</span></a></li>
+            	<li><a href="order_list.php" class="btn_b01 btn" title="목록"><i class="fa fa-list" aria-hidden="true"></i><span class="sound_only">목록</span></a></li>
           
 			<li>
             	<button type="button" class="btn_bo_sch btn_b01 btn" title="게시판 검색"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">게시판 검색</span></button>
             </li>
 			<li> 
-				<a href= 'javascript:void(0);' onclick="is_admin()"  class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a>
+				<a href= 'javascript:void(0);' onclick="is_member2()"  class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a>
 			</li>
 			<? if($is_admin){ ?>
 			<li> 
@@ -69,7 +68,7 @@
 				<tr >
 					<? if($is_admin) {?> <th scope="col"><input type="checkbox" name="all_check" onClick="check_list();" /></th> <? } ?>
 					<th scope="col">번호</th>
-					<th scope="col">제목</th>
+					<th scope="col">상품명</th>
 					<th scope="col">글쓴이</th>
 					<th scope="col">조회</th>
 					<th scope="col">날짜</th>
@@ -86,11 +85,6 @@
 						
 						while($row=mysqli_fetch_array($result)){
 							
-
-							$title = $row['title'];
-							if(strlen($title)>30) {
-								$title = str_replace($row["title"], mb_substr($row["title"],0,20,"euc-kr")."...", $row["title"]);
-							}
 
 							if($row['pw'] != ''){
 								$lock_img = "<img src='../../img/lock.png' alt='lock' title='lock' width='20' height='20'/>";
@@ -116,13 +110,13 @@
 							</td> 
 						<? } ?>
 						<td><? echo $cou ?></td>
-						<? if($is_lock){ ?>
-							<td onclick="location.href='ck_read.php?idx=<?= $row['idx'] ?>' ">
-								<?= $title,  $lock_img, $img;?>
+						<? if($is_lock && !$is_admin){ ?>
+							<td onclick="location.href='ck_read2.php?idx=<?= $row['idx'] ?>' ">
+								<?= $row['product_name'],  $lock_img, $img;?>
 							</td>
 						<? } else { ?>
-							<td onclick="location.href='read.php?idx=<?= $row['idx'] ?>'">
-								<?= $title,  $lock_img, $img;?>
+							<td onclick="location.href='read2.php?idx=<?= $row['idx'] ?>'">
+								<?= $row['product_name'],  $lock_img, $img;?>
 							</td>
 						<? } ?>
 						<td><?= $row[ 'id' ]?></td>
@@ -139,7 +133,7 @@
 	</div>
 	<div class="bo_fx">
 		<ul class="btn_bo_user">
-			 <li><a href='javascript:void(0);' onclick="is_admin()" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li>       
+			 <li><a href='javascript:void(0);' onclick="is_member2()" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li>       
 		</ul>	
     </div>
 	</form>
@@ -181,8 +175,7 @@
             <h3>검색</h3>
             <form name="fsearch" method="post">
 			<select name="sfl" id="sfl">
-                <option value="title" >제목</option>
-				<option value="content" >내용</option>
+				<option value="product_name" >상품명</option>
 				<option value="id" >회원아이디</option>
             </select>
             <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>

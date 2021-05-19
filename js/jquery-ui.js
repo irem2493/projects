@@ -12095,9 +12095,11 @@ $.widget( "ui.dialog", {
 			click: function( event ) {
 				//event.preventDefault();
 				this.close( event );
-				window.location.href='board_list.php';
+				window.location.href='order_list.php';
 			}
 		} );
+
+
 
 		uiDialogTitle = $( "<span>" ).uniqueId().prependTo( this.uiDialogTitlebar );
 		this._addClass( uiDialogTitle, "ui-dialog-title" );

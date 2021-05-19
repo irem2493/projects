@@ -24,7 +24,6 @@
 .check{}
 </style>
 
-
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
@@ -51,12 +50,12 @@
                 <input type="password" name="pw" id="pw" placeholder="Password" class="check">
             </div>
 			<div class="login_pw">
-                <h4>Check Password</h4> 
+                <h4>Check Password<span style="color:red">*</span></h4> 
                 <input type="password" name="pw2" id="pw2" placeholder="Password" onchange="check_pw();">
             </div><span id="check"></span>
 			<div class = "login_id">
-				 <h4>E-mail<span style="color:red">*</span></h4>
-                <input type="text" name="email" id="email" placeholder="Email">
+				 <h4>HandPhone<span style="color:red">*</span></h4>
+                <input type="text" name="hp" id="hp" placeholder="HP">
 		   </div>
           
 			

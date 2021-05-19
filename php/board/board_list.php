@@ -133,7 +133,7 @@
 							$cou --; 
 							$i++;
 						} 
-					} else { ?> <td colspan="5" >등록된 게시물이 없습니다.</td> <? } ?>
+					} else { ?> <td colspan="6" >등록된 게시물이 없습니다.</td> <? } ?>
 			</tbody>
 		</table>
 	</div>

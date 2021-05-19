@@ -6,12 +6,12 @@
 	$name = $_POST['name'];
 	$id = $_POST['id'];
 	$pw = md5($_POST['pw']);
-	$email = $_POST['email'];
+	$hp = $_POST['hp'];
 	
 	$SetSql	.= "				id			= '$id',";
-	$SetSql	.= "				pw				= '$pw',";
-	$SetSql	.= "				email			= '$email',";
-	$SetSql	.= "				name			= '$name'";
+	$SetSql	.= "				pw			= '$pw',";
+	$SetSql	.= "				hp			= '$hp',";
+	$SetSql	.= "				name		= '$name'";
 	
 	#같은 id가 있는지 체크
 		$user_sql = " select count(*) as cnt from info_user where id = '$id' ";
@@ -23,12 +23,12 @@
 			exit;
 		}
 	#같은 이름을 가진 기업이 있는지 체크
-
-		$Sql	 = "	INSERT INTO	info_user SET ";
-		$Sql	.= $SetSql;
-
 		
-		mysqli_query($conn,$Sql);
-	
-		echo "<script> alert('정상적으로 회원가입 되었습니다. \\n 로그인해주새요!');  window.location.href='login.php'; </script>";
+			$Sql	 = "	INSERT INTO	info_user SET ";
+			$Sql	.= $SetSql;
+
+			
+			mysqli_query($conn,$Sql);
+			echo "<script> alert('정상적으로 회원가입 되었습니다. \\n 로그인해주새요!');  window.location.href='login.php'; </script>";
+		
 ?>
