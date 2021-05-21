@@ -67,7 +67,7 @@
 				연락처 : <?= $row['hp']?> <br>
 				주문내용 : <?= $row['product_name']?> x <?= $row['product_cnt']?> <br>
 				우편번호 : <?= $row['postcode']?> <br>
-				주소 : <?= $row['address']?>&nbsp;&nbsp;<?=$row['detailAddress'],$row['extraAddress']?>
+				주소 : <?= $row['address']?>&nbsp;&nbsp;<?=$row['detailAddress'],$row['extraAddress']?> <br>
 				<? if($row['memo'] != '') { ?> 메모 : <?= $row['memo']; }?>
 				</p></font>
 
@@ -101,14 +101,40 @@
 		</ul>
 	</article>
 	
-		<button type="button" class="cmt_btn">
+		<!--<button type="button" class="cmt_btn">
 			<span class="total"><b>댓글</b> 0</span><span class="cmt_more"></span>
 		</button>
 		<section id="bo_vc">
 			<h2>댓글목록</h2>
 				<p id="bo_vc_empty">등록된 댓글이 없습니다.</p>
 		</section>
+		<aside id="bo_vc_w" class="bo_vc_w">
+			 <h2>댓글쓰기</h2>
+    
+			<form name="fviewcomment" id="fviewcomment" action="write_comment_update.php" onsubmit="return fviewcomment_submit(this);" method="post" autocomplete="off">
+				<input type="hidden" name="mode">
+				<input type="hidden" name="idx" value="<?= $idx ?>">
+				<input type="hidden" name="comment_id" value="" id="comment_id">
 
+				<span class="sound_only">내용</span>
+					<textarea id="wr_content" name="wr_content" maxlength="10000" required="" class="required" title="내용" placeholder="댓글내용을 입력해주세요"></textarea>
+					<script>
+				$(document).on("keyup change", "textarea#wr_content[maxlength]", function() {
+					var str = $(this).val()
+					var mx = parseInt($(this).attr("maxlength"))
+					if (str.length > mx) {
+						$(this).val(str.substr(0, mx));
+						return false;
+					}
+				});
+				</script>
+				<div class="bo_vc_w_wr">
+					<div class="btn_confirm">
+						<button type="submit" id="btn_submit" class="btn_submit">댓글등록</button>
+					</div>
+				</div>
+				</form>
+			</aside>-->
 		</div>
 	</div>
 </div>
@@ -152,7 +178,7 @@ function is_delete(){
 	
 	if(now_user == writer ||  "<?= $is_admin ?>"){
 		if(confirm("선택한 자료를 정말 삭제하시겠습니까?")) {
-			location.href = "write_update.php?idx=<?= $idx ?>&mode=delete";
+			location.href = "../order_update.php?idx=<?= $idx ?>&mode=delete";
 		}
 		else location.href = "";
 		

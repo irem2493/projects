@@ -42,7 +42,7 @@
 			<div id="bo_v_top">
 				<ul class="btn_bo_user bo_v_com">
 					<li><a href="order_list.php" class="btn_b01 btn" title="목록"><i class="fa fa-list" aria-hidden="true"></i><span class="sound_only">목록</span></a></li>
-					<li><a href= 'javascript:void(0);' onclick="is_member()" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li>
+					<li><a href= 'javascript:void(0);' onclick="is_member2()" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li>
 					<li>
 						<button type="button" class="btn_more_opt is_view_btn btn_b01 btn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 							<span class="sound_only">게시판 리스트 옵션</span>
@@ -67,7 +67,7 @@
 				연락처 : <?= $row['hp']?> <br>
 				주문내용 : <?= $row['product_name']?> x <?= $row['product_cnt']?> <br>
 				우편번호 : <?= $row['postcode']?> <br>
-				주소 : <?= $row['address']?>&nbsp;&nbsp;<?=$row['detailAddress'],$row['extraAddress']?>
+				주소 : <?= $row['address']?>&nbsp;&nbsp;<?=$row['detailAddress'],$row['extraAddress']?> <br>
 				<? if($row['memo'] != '') { ?> 메모 : <?= $row['memo']; }?>
 				</p></font>
 
@@ -101,7 +101,7 @@
 		</ul>
 	</article>
 	
-		<button type="button" class="cmt_btn">
+		<!--<button type="button" class="cmt_btn">
 			<span class="total"><b>댓글</b> 0</span><span class="cmt_more"></span>
 		</button>
 		<section id="bo_vc">
@@ -112,16 +112,9 @@
 			 <h2>댓글쓰기</h2>
     
 			<form name="fviewcomment" id="fviewcomment" action="write_comment_update.php" onsubmit="return fviewcomment_submit(this);" method="post" autocomplete="off">
-				<input type="hidden" name="w" value="c" id="w">
-				<input type="hidden" name="bo_table" value="study">
-				<input type="hidden" name="wr_id" value="5">
+				<input type="hidden" name="mode">
+				<input type="hidden" name="idx" value="<?= $idx ?>">
 				<input type="hidden" name="comment_id" value="" id="comment_id">
-				<input type="hidden" name="sca" value="">
-				<input type="hidden" name="sfl" value="">
-				<input type="hidden" name="stx" value="">
-				<input type="hidden" name="spt" value="">
-				<input type="hidden" name="page" value="">
-				<input type="hidden" name="is_good" value="">
 
 				<span class="sound_only">내용</span>
 					<textarea id="wr_content" name="wr_content" maxlength="10000" required="" class="required" title="내용" placeholder="댓글내용을 입력해주세요"></textarea>
@@ -141,7 +134,7 @@
 					</div>
 				</div>
 				</form>
-			</aside>
+			</aside>-->
 		</div>
 	</div>
 </div>
@@ -185,7 +178,7 @@ function is_delete(){
 	
 	if(now_user == writer ||  "<?= $is_admin ?>"){
 		if(confirm("선택한 자료를 정말 삭제하시겠습니까?")) {
-			location.href = "write_update.php?idx=<?= $idx ?>&mode=delete";
+			location.href = "../order_update.php?idx=<?= $idx ?>&mode=delete";
 		}
 		else location.href = "";
 		

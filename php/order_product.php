@@ -5,6 +5,11 @@
 	$sql = "select * from product where idx = '$idx'";
 	$result = mysqli_query($conn,$sql);
 	$row = mysqli_fetch_assoc($result);
+
+	$sql2 = "select * from info_user where id = '$member_id'";
+	$result2 = mysqli_query($conn,$sql2);
+	$row2 = mysqli_fetch_assoc($result2);
+
 ?>
 <div id="wrapper" style="height: 1100px">
     <div id="container_wr">
@@ -27,26 +32,26 @@
 					</div>
 					<div class="bo_w_info write_div bo_w_select2">
 						<label for="wr_hp" class="sound_only">연락처<strong>필수</strong></label>
-						<input type="text" name="hp" value="" id="hp" required class="frm_input half_input required" placeholder="연락처" > 
+						<input type="text" name="hp" value="<?if ($mode == ""){if($is_member){ echo $row2['hp'];}}  else{ echo  $row['hp']; }  ?>" id="hp" required class="frm_input half_input required" placeholder="연락처" > 
 
 						<label for="wr_product" class="sound_only">상품명<strong>필수</strong></label>
 						<select name="p_name" id="p_name" >
-							<option value="3K(9~10과)" >3K(9~10과)</option>
-							<option value="3K(11~12과)" >3K(11~12과)</option>
-							<option value="3K(15~18과)" >3K(15~18과)</option>
+							<option value="3K(9~10과)" <? if($row['product_name']=='3K(9~10과)'){ ?> selected <? } ?>>3K(9~10과)</option>
+							<option value="3K(11~12과)" <? if($row['product_name']=='3K(11~12과)'){ ?> selected <? } ?>>3K(11~12과)</option>
+							<option value="3K(15~18과)" <? if($row['product_name']=='3K(15~18과)'){ ?> selected <? } ?>>3K(15~18과)</option>
 						</select>
 
 						<label for="wr_cnt" class="sound_only">수량<strong>필수</strong></label>
-						<input type="number" min='0' name="wr_cnt" value="" id="wr_cnt" required class="frm_input quarter_input required" placeholder="수량" >
+						<input type="number" min='0' name="wr_cnt" value="<?= $row['product_cnt'] ?>" id="wr_cnt" required class="frm_input quarter_input required" placeholder="수량" >
 					</div>
 					<div class="bo_w_info write_div">
 							
-								<input type="text" id="postcode" name= "postcode" class="d_form mini" placeholder="우편번호" required>
+								<input type="text" id="postcode" name= "postcode" value = "<?= $row['postcode'] ?>" class="d_form mini" placeholder="우편번호" required>
 								<input type="button" onclick="execDaumPostcode()" class="d_btn" value="우편번호 찾기"><br>
 								
-								<input type="text" id="address" name="address" class="d_form large" placeholder="주소"><br>
-								<input type="text" id="detailAddress" name="detailAddress" class="d_form" placeholder="상세주소">
-								<input type="text" id="extraAddress" name="extraAddress" class="d_form" placeholder="참고항목">
+								<input type="text" id="address" name="address" value="<?= $row['address'] ?>" class="d_form large" placeholder="주소"><br>
+								<input type="text" id="detailAddress" name="detailAddress" value="<?= $row['detailAddress'] ?>" class="d_form" placeholder="상세주소">
+								<input type="text" id="extraAddress" name="extraAddress"value="<?= $row['extraAddress'] ?>" class="d_form" placeholder="참고항목">
 
 								<div id="wrap" style="display:none;border:1px solid;width:500px;height:300px;margin:5px 0;position:relative">
 								<img src="//t1.daumcdn.net/postcode/resource/images/close.png" id="btnFoldWrap" style="cursor:pointer;position:absolute;right:0px;top:-1px;z-index:1" onclick="foldDaumPostcode()" alt="접기 버튼">
