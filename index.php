@@ -85,7 +85,7 @@
 						<?} } } else { ?> <td colspan="5" >등록된 게시물이 없습니다.</td> <? }
 						?>
 					</ul>
-				<a href="/php/board/board_list.php" class="lt_more"><span class="sound_only">공지사항</span>더보기</a>
+				<a href="/php/board/order_list.php" class="lt_more"><span class="sound_only">주문현황</span>더보기</a>
 
 			</div>
 			</div>
@@ -94,7 +94,7 @@
 			<div style="float:left;" class="links">
 				<ul>
 					<li>
-						<a href="/php/order_product.php">PC로 주문하기</a>
+						<a href='javascript:void(0);' onclick="is_member3()">PC로 주문하기</a>
 					</li>
 				</ul>
 			</div>

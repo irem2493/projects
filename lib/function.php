@@ -8,8 +8,29 @@ function is_member(){
 		location.href = "";
 	}else location.href = "write.php";
 }
-
-
+function is_member2(){
+	var is_member = "<?= $is_member ?>";
+	var is_admin = "<?= $is_admin ?>";
+	if( ! is_member && !is_admin){
+		alert("로그인을 해야 글을 쓸 수 있습니다!");
+		location.href = "";
+	}else location.href = "../order_product.php";
+}
+function is_member3(){
+	var is_member = "<?= $is_member ?>";
+	var is_admin = "<?= $is_admin ?>";
+	if( ! is_member && !is_admin){
+		alert("로그인을 해야 글을 쓸 수 있습니다!");
+		location.href = "";
+	}else location.href = "php/order_product.php";
+}
+function is_admin(){
+	var is_admin = "<?= $is_admin ?>";
+	if( !is_admin){
+		alert("공지사항은 관리자만 쓸 수 있습니다.");
+		location.href = "";
+	}else location.href = "write.php";
+}
 
 var ox_value = 0;
 
