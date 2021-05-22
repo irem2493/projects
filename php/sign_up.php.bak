@@ -23,9 +23,6 @@
 
 .check{}
 </style>
-<?
-	$mode = $_GET['mode'];
-?>
 
 <html>
 <head>
@@ -82,6 +79,7 @@
 
 function checkId(){
 	  var id = document.getElementById('id').value;
+	 
 	$.ajax({
 		type : 'POST', 
 		url : 'check_id.php', 

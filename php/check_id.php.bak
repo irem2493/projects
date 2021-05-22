@@ -1,4 +1,4 @@
-<?include ("./connect_db.php");
+<?include ("../connect_db.php");
 	header("Content-type: text/html; charset=euc-kr");
 
 	$id = $_POST['id'];

@@ -29,7 +29,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
 
 <link rel="stylesheet" href="/css/login.css">
-<title>book_signUp</title>
+<title>signUp</title>
 </head>
 <body class = "body_background">
 <form name = "signup" action = "sign_up_update.php" onSubmit="return fsignform_submit(this);" method = "post">
@@ -79,6 +79,7 @@
 
 function checkId(){
 	  var id = document.getElementById('id').value;
+	 
 	$.ajax({
 		type : 'POST', 
 		url : 'check_id.php', 

@@ -1,6 +1,6 @@
 <?
 	include  $_SERVER['DOCUMENT_ROOT']."/head.php";
-	$mode = $_GET["mode"];
+	($_GET["mode"] == "") ? $mode = $_POST["mode"] : $mode = $_GET["mode"];
 	($_GET["idx"] == "") ? $idx	= $_POST["idx"] : $idx =  $_GET["idx"];
 	$id		= $_POST["id"];
 	$pw = md5($_POST["password"]);

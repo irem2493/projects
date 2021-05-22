@@ -18,7 +18,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/53a8c415f1.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="/css/login.css">
-	<title> book_login </title>
+	<title> login </title>
 </head>
 <body class = "body_background">
 <form name = "login" action = "login_check.php" onSubmit="return flogin_submit(this);" method = "post">

@@ -18,6 +18,6 @@
 		else  $result = 0;
 
 	#같은 이름을 가진 기업이 있는지 체크
-
+	
 	echo $result;}
 	?>
