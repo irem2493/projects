@@ -12095,7 +12095,7 @@ $.widget( "ui.dialog", {
 			click: function( event ) {
 				//event.preventDefault();
 				this.close( event );
-				window.location.href='order_list.php';
+				history.go(-1);
 			}
 		} );
 
