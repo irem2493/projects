@@ -35,16 +35,11 @@
                 <input type="password" name="pw" id="pw" placeholder="Password">
             </div>
             <div class="login_etc">
-                <!--<div class="checkbox">
-                <input type="checkbox" name="" id=""> 로그인 상태유지
-                </div>-->
+               
 				<div style="padding:5px; " ></div>
                 <div class="forgot_pw" style = "text-align: center">
-					<!--<a href="">아이디 찾기</a>
-					|
-					 <a href="">비밀번호 찾기</a>
-					 |
-					--><a href="sign_up.php">회원가입</a>
+					
+					<a href="sign_up.php">회원가입</a>
 					</div>
 				
             </div>
